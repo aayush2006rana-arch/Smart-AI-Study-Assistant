@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar glass">
+
+<a href="index.html" class="logo">
+Smart<span>AI</span>
+</a>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#features">Features</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="question-section">
+
+<div class="question-header">
+
+<h1>AI Question Generator</h1>
+
+<p>
+Generate MCQs, Viva Questions,
+Short Question from notes, PDFs Files.
+
+</div>
+
+<div class="question-box glass">
+
+<textarea
+id="questionText"
+placeholder="Paste your notes here..."
+></textarea>
+
+<div class="question-upload-box">
+
+    <label class="question-upload-btn" for="questionPdf">
+        📄 Upload PDF
+    </label>
+
+    <input
+        type="file"
+        id="questionPdf"
+        accept="application/pdf"
+        hidden
+    >
+
+    <span id="questionFileName">
+        No PDF selected
+    </span>
+
+</div>
+
+<div class="question-types">
+
+<label>
+<input type="checkbox" value="mcq">
+ MCQ
+</label>
+
+<label>
+<input type="checkbox" value="viva">
+ Viva
+</label>
+
+<label>
+<input type="checkbox" value="short">
+ Short Questions
+</label>
+
+</div>
+
+<button
+class="planner-btn"
+onclick="generateQuestions()">
+
+Generate Questions
+
+</button>
+
+</div>
+
+<div
+id="questionOutput"
+class="question-output">
+
+</div>
+
+<div class="question-history-header">
+    <h2>Question History</h2>
+</div>
+
+<div id="questionHistory"></div>
+
+</section>
+
+<script src="question-generator.js"></script>
+
+</body>
+</html>

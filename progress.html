@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progress Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar glass">
+
+<a href="index.html" class="logo">
+Smart<span>AI</span>
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="index.html#features">Features</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+<section class="progress-section">
+
+    <div class="progress-header">
+        <h1>Progress Tracker</h1>
+        <p>Track your learning activity, study performance, and weekly goals in one place.</p>
+    </div>
+
+    <div class="progress-grid">
+
+        <div class="progress-card glass">
+            <div class="progress-icon">⏳</div>
+            <h3>Study Hours</h3>
+            <div id="progressStudyHours" class="progress-number">
+                0 Hours
+            </div>
+            <div class="progress-bar">
+                <span id="studyHoursBar"></span>
+            </div>
+        </div>
+
+        <div class="progress-card glass">
+            <div class="progress-icon">✅</div>
+            <h3>Tasks Completed</h3>
+            <div id="progressTasks" class="progress-number">
+                0
+            </div>
+            <div class="progress-bar">
+                <span id="tasksBar"></span>
+            </div>
+        </div>
+
+        <div class="progress-card glass">
+            <div class="progress-icon">🎯</div>
+            <h3>Weekly Goal</h3>
+            <div id="progressGoal" class="progress-number">
+                0%
+            </div>
+            <div class="progress-bar">
+                <span id="goalBar"></span>
+            </div>
+        </div>
+
+        <div class="progress-card glass">
+            <div class="progress-icon">📚</div>
+            <h3>Notes Summarized</h3>
+            <div id="progressNotes" class="progress-number">
+                0
+            </div>
+            <div class="progress-bar">
+                <span id="notesBar"></span>
+            </div>
+        </div>
+
+        <div class="progress-card glass">
+            <div class="progress-icon">🤖</div>
+            <h3>Questions Generated</h3>
+            <div id="progressQuestions" class="progress-number">
+                0
+            </div>
+            <div class="progress-bar">
+                <span id="questionsBar"></span>
+            </div>
+        </div>
+
+        <div class="progress-card glass">
+            <div class="progress-icon">⭐</div>
+            <h3>Productivity Score</h3>
+            <div id="progressScore" class="progress-number">
+                0%
+            </div>
+            <div class="progress-bar">
+                <span id="scoreBar"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="progress-summary glass">
+        <h2>Weekly Performance</h2>
+
+        <div class="weekly-bars">
+            <div><span style="height:45%;"></span><p>Mon</p></div>
+            <div><span style="height:65%;"></span><p>Tue</p></div>
+            <div><span style="height:35%;"></span><p>Wed</p></div>
+            <div><span style="height:80%;"></span><p>Thu</p></div>
+            <div><span style="height:55%;"></span><p>Fri</p></div>
+            <div><span style="height:90%;"></span><p>Sat</p></div>
+            <div><span style="height:70%;"></span><p>Sun</p></div>
+        </div>
+    </div>
+
+</section>
+
+<script src="stats.js"></script>
+<script src="progress.js"></script>
+<script src="profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar glass">
+
+<a href="index.html" class="logo">
+    SmartAI
+</a>
+
+<ul class="nav-links">
+
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+
+    <li>
+        <a href="index.html#features">Features</a>
+    </li>
+
+    <li>
+        <a href="about.html">About</a>
+    </li>
+
+    <li>
+        <a href="contact.html">Contact</a>
+    </li>
+
+</ul>
+
+<!-- LOGIN BUTTON -->
+
+<a
+id="loginBtn"
+href="login.html"
+class="btn primary-btn">
+
+Login
+
+</a>
+
+<!-- PROFILE SECTION -->
+
+<div
+id="profileSection"
+class="profile-section"
+style="display:none;">
+
+<div
+class="profile-trigger"
+onclick="toggleProfileMenu()">
+
+<img
+id="profilePic"
+class="profile-pic"
+src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+
+<span
+id="profileName">
+
+User
+
+</span>
+
+</div>
+
+<div
+id="profileMenu"
+class="profile-menu glass">
+
+<button onclick="changePhotoClick()">
+Change Profile Picture
+</button>
+
+<button onclick="window.location.href='dashboard.html'">
+Dashboard
+</button>
+
+<button onclick="toggleThemeMenu()">
+Change Theme
+</button>
+
+<div
+id="themeSubMenu"
+class="theme-submenu">
+
+<button onclick="setTheme('theme-default')">
+Default Theme
+</button>
+
+<button onclick="setTheme('theme-dark')">
+Dark Theme
+</button>
+
+<button onclick="setTheme('theme-light')">
+Light Theme
+</button>
+
+</div>
+
+<button onclick="logout()">
+Logout
+</button>
+
+<input
+id="profileUpload"
+type="file"
+accept="image/*"
+onchange="changeProfileImage(event)"
+style="display:none;">
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="dashboard">
+
+    <div class="dashboard-header">
+        <div>
+            <h1 id="welcomeText">Welcome 👋</h1>
+            <p>Here is your study performance overview.</p>
+        </div>
+
+        <a href="planner.html" class="btn primary-btn">
+            Create Study Plan
+        </a>
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card glass">
+            <div class="dash-icon">📚</div>
+            <h3>Notes Summarized</h3>
+            <p>0</p>
+        </div>
+
+        <div class="dashboard-card glass">
+            <div class="dash-icon">🤖</div>
+            <h3>Questions Generated</h3>
+            <p>0</p>
+        </div>
+
+        <div class="dashboard-card glass">
+            <div class="dash-icon">⏳</div>
+            <h3>Study Hours</h3>
+            <p>0 Hours</p>
+        </div>
+
+        <div class="dashboard-card glass">
+            <div class="dash-icon">🎯</div>
+            <h3>Weekly Goal</h3>
+            <p>0%</p>
+        </div>
+
+        <div class="dashboard-card glass">
+            <div class="dash-icon">🔥</div>
+            <h3>Study Streak</h3>
+            <p>0 Days</p>
+        </div>
+
+        <div class="dashboard-card glass">
+            <div class="dash-icon">⭐</div>
+            <h3>Productivity Score</h3>
+            <p>0%</p>
+        </div>
+
+    </div>
+
+</section>
+
+<span id="progressStudyHours">0 Hours</span>
+<span id="progressQuestions">0</span>
+<span id="progressNotes">0</span>
+<span id="progressGoal">0%</span>
+<span id="progressStreak">0 Days</span>
+<span id="progressScore">0%</span>
+
+<script src="profile.js"></script>
+<script src="stats.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

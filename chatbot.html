@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar glass">
+
+    <a href="index.html" class="logo">
+        Smart<span>AI</span>
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</nav>
+
+<div class="chatbot-layout">    
+
+    <!-- SIDEBAR -->
+
+    <div class="chat-sidebar glass">
+
+        <button class="sidebar-btn" onclick="newChat()">
+            + New Chat
+        </button>
+
+        <button class="sidebar-btn" onclick="showChatHistory()">
+            Chat History
+        </button>
+        <div id="historyList"></div>
+
+        <label class="upload-btn" for="chatPdf">
+            Upload PDF
+        </label>
+
+        <input
+            type="file"
+            id="chatPdf"
+            accept="application/pdf"
+            style="display:none;"
+            onchange="uploadChatPDF(event)"
+>
+
+        <label class="upload-btn" for="chatImage">
+            Upload Image
+        </label>
+
+        <input
+            type="file"
+            id="chatImage"
+            accept="image/*"
+            style="display:none;"
+            onchange="uploadChatImage(event)"
+>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-area glass">
+
+        <div class="welcome-box">
+
+            <h1>Smart AI Assistant</h1>
+
+            <p>
+                Ask doubts, upload notes, generate summaries,
+                create study plans and learn smarter.
+            </p>
+
+        </div>
+
+        <div id="chatMessages"></div>
+
+        <div class="chat-input-container">
+
+    <input
+        type="text"
+        id="userInput"
+        placeholder="Message Smart AI..."
+    >
+
+    <button
+        type="button"
+        id="sendBtn">
+        Send
+    </button>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="chatbot.js"></script>
+
+</body>
+</html>

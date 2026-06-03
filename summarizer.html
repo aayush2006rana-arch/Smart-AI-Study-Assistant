@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Notes Summarizer</title>
+    <link rel="stylesheet" href="summarizer.css">
+</head>
+
+<body>
+
+<nav class="navbar glass">
+    <a href="index.html" class="logo">Smart<span>AI</span></a>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="summarizer-page">
+
+    <div class="summarizer-card glass">
+
+        <h1>AI Notes Summarizer</h1>
+
+        <p class="subtitle">
+            Paste your notes and get an instant AI-generated summary.
+        </p>
+
+        <div class="split-container">
+
+            <div class="input-panel">
+                <h2>📝 Input Notes</h2>
+                <textarea id="notesInput" placeholder="Paste your notes here..."></textarea>
+            </div>
+
+            <div class="summary-panel">
+
+                <div class="summary-header">
+                    <h2>📄 Generated Summary</h2>
+
+                    <button id="copyBtn" class="copy-icon-btn" title="Copy Summary">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
+                            <rect x="8" y="8" width="11" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="5" y="5" width="11" height="11" rx="2" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="summary-container" id="summaryOutput">
+                    <div class="empty-state">
+                        Your AI generated summary will appear here...
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="action-row">
+
+            <div class="custom-file-upload">
+                <label for="pdfFile" class="upload-btn">📄 Upload PDF</label>
+                <input type="file" id="pdfFile" hidden>
+                <span id="fileName">
+                    No file selected
+                </span>
+
+                <button id="removeFileBtn"
+                        class="remove-file-btn"
+                        type="button">
+                            ×
+                </button>
+            </div>
+
+            <button id="summarizeBtn">
+                Generate Summary
+            </button>
+
+        </div>
+
+        <div class="loader" id="loader">
+            Generating Summary...
+        </div>
+
+    </div>
+
+</section>
+
+<script src="summarizer.js"></script>
+<script src="profile.js"></script>
+
+</body>
+</html>

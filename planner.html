@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+<nav class="navbar glass">
+
+<a href="index.html" class="logo">
+Smart<span>AI</span>
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="index.html#features">Features</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+<section class="planner-section">
+
+  <div class="planner-header">
+    <h1>AI Study Planner</h1>
+    <p>Create a personalized study schedule based on your subjects, exam date, and daily study hours.</p>
+  </div>
+
+  <div class="planner-box glass">
+
+    <div class="planner-form">
+
+      <div class="planner-input-group">
+        <label>Subjects</label>
+        <input type="text" id="subjects" placeholder="Example: Java, DBMS, Python">
+      </div>
+
+      <div class="planner-input-group">
+        <label>Exam Date</label>
+        <input type="date" id="examDate">
+      </div>
+
+      <div class="planner-input-group">
+        <label>Daily Study Hours</label>
+        <input type="number" id="hours" placeholder="Example: 3">
+      </div>
+
+      <button class="planner-btn" onclick="createPlanner()">
+        Create Study Planner
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="planner-history-header">
+
+    <h2>Planner History</h2>
+
+    <button
+        class="planner-btn"
+        onclick="newPlanner()">
+
+        + New Planner
+
+    </button>
+
+</div>
+
+<div id="plannerHistory"></div>
+
+<div id="plannerOutput" class="planner-output"></div>
+
+</section>
+
+<script>
+function createPlanner(){
+
+  const subjects = document.getElementById("subjects").value.split(",");
+  const examDate = new Date(document.getElementById("examDate").value);
+  const hours = document.getElementById("hours").value;
+
+  const today = new Date();
+
+  const daysLeft = Math.ceil((examDate - today)/(1000*60*60*24));
+
+  let html = "";
+
+  for(let i=0;i<daysLeft;i++){
+
+    const subject = subjects[i % subjects.length];
+
+    html += `
+      <div class="feature-card">
+        <h3>Day ${i+1}</h3>
+        <p>Study Subject: ${subject}</p>
+        <p>Study Hours: ${hours}</p>
+        <p>Break Time: 15 Minutes Every Hour</p>
+      </div>
+    `;
+  }
+
+  document.getElementById("plannerOutput").innerHTML = html;
+}
+</script>
+<script src="planner.js"></script>
+<script src="profile.js"></script>
+
+
+</body>
+</html>

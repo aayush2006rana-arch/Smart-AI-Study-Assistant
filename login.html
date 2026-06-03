@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar glass">
+
+<a href="index.html" class="logo">
+Smart<span>AI</span>
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="index.html#features">Features</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+<div class="auth-container">
+
+<div class="auth-box glass">
+
+<h2>Welcome Back</h2>
+
+<p class="auth-subtitle">
+Login to continue studying
+</p>
+
+<div class="input-group">
+<input type="email" id="email" placeholder="Email Address">
+</div>
+
+<div class="input-group">
+<input type="password" id="password" placeholder="Password">
+</div>
+
+<div class="forgot-password">
+
+<a href="reset-password.html">
+Forgot Password?
+</a>
+
+</div>
+
+<button class="auth-btn" onclick="login()">
+Login
+</button>
+
+<div class="divider">
+<span>OR</span>
+</div>
+
+
+
+<!-- PHONE LOGIN -->
+
+<div class="phone-auth">
+
+    <button
+    class="social-btn phone-btn"
+    onclick="showPhoneLogin()">
+
+        📱 Continue with Phone
+
+    </button>
+
+    <div
+    id="phoneSection"
+    style="display:none;">
+
+        <input
+        type="tel"
+        id="phoneNumber"
+        class="phone-input"
+        placeholder="Enter Your Mobile Number">
+
+        <button
+        class="phone-btn"
+        onclick="sendOTP()">
+
+            Send OTP
+
+        </button>
+
+        <div
+        id="recaptcha-container">
+
+        </div>
+
+        <div class="otp-box">
+
+            <input
+            type="text"
+            id="otpCode"
+            class="phone-input"
+            placeholder="Enter 6-digit OTP">
+
+            <button
+            class="phone-btn"
+            onclick="verifyOTP()">
+
+                Verify OTP
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<p class="bottom-text">
+
+Don't have an account?
+
+<a href="signup.html">
+Signup
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<script type="module" src="login.js"></script>
+
+<script src="profile.js"></script>
+
+
+</body>
+</html>
